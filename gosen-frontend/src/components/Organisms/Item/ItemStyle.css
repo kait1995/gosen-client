@@ -9,22 +9,3 @@
     border-radius: 10px 10px 10px 10px;
     box-shadow: 4px 4px 6px black;
 }
-
-.slideSwitch{
-    flex-grow: 1;
-}
-
-.title{
-    flex-grow: 7;
-}
-
-.status1{
-    flex-grow: 1;
-}
-
-.status2{
-    flex-grow: 1;
-    color: yellow;
-    height: 30px;
-    width: 30px;
-}
