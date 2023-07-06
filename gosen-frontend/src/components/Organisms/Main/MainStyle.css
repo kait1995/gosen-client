@@ -1,11 +1,10 @@
+
 .main{
-    grid-area: main;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #07305f;
     background-size: cover;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 25px;
 }
-
