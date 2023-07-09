@@ -1,19 +1,13 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import "./AppStyle.css";
-import Header from "./components/Organisms/Header/Header";
-import MainContainer from "./components/Organisms/Main/MainContainer";
+import CommonTemplate from "./components/Templates/Common/CommonTemplate";
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={
-            <div className="top">
-              <Header/>
-              <MainContainer/>
-            </div>
-          }/>
+          <Route path="/" element={<CommonTemplate/>}/>
         </Routes>
       </BrowserRouter>
     </div>

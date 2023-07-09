@@ -6,9 +6,15 @@ import "./ItemStyle.css";
 const Item = () => {
     return(
         <div className="mainContents">
-            <SlideSwitch/>
-            <ItemTitle/>
-            <BatteryIcon/>
+            <div className="slideSwitch">
+                <SlideSwitch/>
+            </div>
+            <div className="itemTitle">
+                <ItemTitle/>
+            </div>
+            <div className="statusIcon">
+                <BatteryIcon/>
+            </div>
         </div>
     );
 }

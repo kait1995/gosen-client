@@ -9,3 +9,16 @@
     border-radius: 10px 10px 10px 10px;
     box-shadow: 4px 4px 6px black;
 }
+
+.slideSwitch{
+    margin: 5px;
+}
+
+.itemTitle{
+    margin: 5px;
+}
+
+.statusIcon{
+    margin-left: auto;
+    padding-right: 10px;
+}
