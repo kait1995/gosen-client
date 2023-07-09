@@ -3,8 +3,8 @@ import "./AtomsStyle.css";
 
 const BatteryIcon= () => {
     return(
-        <div className="batteryStatus">
-            <BoltIcon className="status2"/>
+        <div className="status">
+            <BoltIcon/>
         </div>
     );
 }
