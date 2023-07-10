@@ -3,9 +3,11 @@ import Item from "../../Organisms/Item/Item";
 
 const MainPresenter = () => {
     return(
-        <div>
-            <Item/>
-        </div>
+        <>
+            <div className="item">
+                <Item/>
+            </div>
+        </>
     );
 }
 

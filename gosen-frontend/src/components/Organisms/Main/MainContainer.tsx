@@ -3,7 +3,7 @@ import "./MainStyle.css";
 
 const MainContainer = () => {
     return (
-        <div className="main">
+        <div className="mainPresenter">
             <MainPresenter/>
         </div>
     );
