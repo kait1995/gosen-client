@@ -5,8 +5,12 @@ import "./CommonStyle.css";
 const CommonTemplate = () => {
     return(
         <div className="common">
-            <Header/>
-            <MainContainer/>
+            <div className="test">
+                <Header/>
+            </div>
+            <div className="test2">
+                <MainContainer/>
+            </div>
         </div>
     );
 }

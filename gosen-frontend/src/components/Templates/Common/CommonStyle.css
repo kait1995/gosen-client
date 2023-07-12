@@ -5,5 +5,19 @@
     height: 100vh;
 }
 
+.test{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+.test2{
+    flex: 1;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
 
 
