@@ -2,8 +2,7 @@ import BatteryIcon from "../../Atoms/BatteryIcon";
 import ItemTitle from "../../Atoms/Item/ItemTitle";
 import SlideSwitch from "../../Atoms/SlideSwitch";
 import "./ItemStyle.css";
-
-const Item = () => {
+const ItemPresenter = () => {
     return(
         <div className="mainContents">
             <div className="slideSwitch">
@@ -19,4 +18,4 @@ const Item = () => {
     );
 }
 
-export default Item;
+export default ItemPresenter;

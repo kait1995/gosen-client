@@ -6,10 +6,14 @@
     background-size: cover;
     padding: 25px;
     position: relative;
+    align-items: center;
 }
 
 .item{
     padding: 10px;
+    min-width: 250px;
+    max-width: 800px;
+    width: 80%;
 }
 
 .addButton{

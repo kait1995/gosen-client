@@ -1,7 +1,7 @@
-import MainPresenter from "./MainPresenter";
+import MainPresenter from "./MainContentsPresenter";
 import "./MainStyle.css";
 
-const MainContainer = () => {
+const MainContentsContainer = () => {
     return (
         <div className="mainPresenter">
             <MainPresenter/>
@@ -9,4 +9,4 @@ const MainContainer = () => {
     );
 }
 
-export default MainContainer;
+export default MainContentsContainer;

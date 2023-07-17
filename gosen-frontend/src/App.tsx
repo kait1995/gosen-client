@@ -1,13 +1,19 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import ItemDetailContainer from "./components/Organisms/ItemDetail/ItemDetailContainer";
+import CommonContainer from "./components/Templates/Common/CommonContainer";
+import MainContentsContainer from "./components/Organisms/Main/MainContentsContainer";
 import "./AppStyle.css";
-import CommonTemplate from "./components/Templates/Common/CommonTemplate";
 
 function App() {
+
   return (
     <div className="app">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<CommonTemplate/>}/>
+          <Route path="/" element={<CommonContainer/>}>
+            <Route path="/top" element={<MainContentsContainer/>}/>
+            <Route path="/detail" element={<ItemDetailContainer/>}/>
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

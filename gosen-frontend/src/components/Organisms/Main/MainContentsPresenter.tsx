@@ -1,57 +1,57 @@
 import "./MainStyle.css";
-import Item from "../../Organisms/Item/Item";
 import AddButton from "../../Atoms/AddButton";
+import ItemContainer from "../Item/ItemContainer";
 
-const MainPresenter = () => {
+const MainContentsPresenter = () => {
     return(
         <>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="item">
-                <Item/>
+                <ItemContainer/>
             </div>
             <div className="addButton">
                 <AddButton/>
@@ -60,4 +60,4 @@ const MainPresenter = () => {
     );
 }
 
-export default MainPresenter;
+export default MainContentsPresenter;
