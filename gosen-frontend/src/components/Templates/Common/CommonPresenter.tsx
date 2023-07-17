@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom";
 import HeaderContainer from "../../Organisms/Header/HeaderContainer";
+import MainContentsContainer from "../../Organisms/Main/MainContentsContainer";
 import "./CommonStyle.css";
 
 const CommonPresenter = () => {
@@ -9,7 +9,7 @@ const CommonPresenter = () => {
                 <HeaderContainer/>
             </div>
             <div className="main">
-                <Outlet/>
+                <MainContentsContainer/>
             </div>
         </div>
     );
