@@ -1,22 +1,11 @@
 
-.common{
+.detail{
     display: flex;
     flex-flow: column;
-    height: 100vh;
-}
-
-.test{
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    z-index: 1;
-}
-
-.test2{
-    flex: 1;
-    margin-top: 70px;
-    margin-bottom: 50px;
+    background-color: #134b83;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 4px 4px 6px black;
+    padding: 10px;
 }
 
 

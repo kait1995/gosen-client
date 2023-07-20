@@ -8,10 +8,11 @@
     color: #fafafa;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 4px 4px 6px black;
+    position: relative;
+    padding: 5px;
 }
 
 .slideSwitch{
-    margin: 5px;
 }
 
 .itemTitle{
@@ -21,4 +22,10 @@
 .statusIcon{
     margin-left: auto;
     padding-right: 10px;
+}
+
+.detailAdjust{
+    z-index: 0;
+    margin-top: -10px;
+    padding-top: 5px;
 }

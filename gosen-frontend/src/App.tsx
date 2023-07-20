@@ -1,5 +1,4 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import ItemDetailContainer from "./components/Organisms/ItemDetail/ItemDetailContainer";
 import CommonContainer from "./components/Templates/Common/CommonContainer";
 import "./AppStyle.css";
 
@@ -16,7 +15,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/top" element={<CommonContainer/>}/>
-          <Route path="/detail" element={<ItemDetailContainer/>}/>
           <Route path="*" element={<PageNotFound/>}/>
         </Routes>
       </BrowserRouter>

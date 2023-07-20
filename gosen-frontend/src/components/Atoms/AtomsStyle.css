@@ -11,3 +11,14 @@
     width: 70px;
     opacity: 0.6;
 }
+
+.deviceID{
+    background: #134b83;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    color: #fafafa;
+}
+
+.deviceID:focus{
+    outline: #fafafa 1px solid;
+}
