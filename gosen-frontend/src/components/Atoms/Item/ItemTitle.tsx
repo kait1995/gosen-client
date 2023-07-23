@@ -3,7 +3,7 @@ import "./ItemStyle.css";
 const ItemTitle = () => {
     return(
         <div>
-            <div className="title">title</div>
+            <input className="itemTitle" type="text" placeholder="Input title ID here..."/>
         </div>
     );
 }

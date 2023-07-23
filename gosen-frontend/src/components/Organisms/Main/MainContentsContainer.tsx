@@ -1,10 +1,10 @@
-import MainPresenter from "./MainContentsPresenter";
+import MainContentsPresenter from "./MainContentsPresenter";
 import "./MainStyle.css";
 
 const MainContentsContainer = () => {
     return (
-        <div className="mainPresenter">
-            <MainPresenter/>
+        <div className="mainContentsPresenter">
+            <MainContentsPresenter/>
         </div>
     );
 }

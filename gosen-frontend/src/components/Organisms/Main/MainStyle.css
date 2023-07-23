@@ -1,5 +1,5 @@
 
-.mainPresenter{
+.mainContentsPresenter{
     display: flex;
     flex-direction: column;
     background-color: #07305f;
@@ -7,6 +7,7 @@
     padding: 25px;
     position: relative;
     align-items: center;
+    height: 100%;
 }
 
 .item{

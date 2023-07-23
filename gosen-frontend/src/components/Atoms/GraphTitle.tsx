@@ -2,7 +2,7 @@ import "./AtomsStyle.css";
 
 const GraphTitle = () => {
     return(
-        <div>
+        <div className="graphTitle">
             Graph Title
         </div>
     );

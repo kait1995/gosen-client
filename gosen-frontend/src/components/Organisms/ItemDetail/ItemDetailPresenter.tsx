@@ -10,7 +10,7 @@ const ItemDetailPresenter = () => {
             <div>
                 <GraphTitle/>
             </div>
-            <div>
+            <div className="graph">
                 <Graph/>
             </div>
             <div>

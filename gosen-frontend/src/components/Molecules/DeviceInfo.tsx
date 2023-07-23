@@ -1,10 +1,13 @@
 import DeviceConnectionStatus from "../Atoms/DeviceConnectionStatus";
 import DeviceID from "../Atoms/DeviceID";
+import "./MoleculesStyle.css";
 
 const DeviceInfo = () => {
     return(
         <div>
-            <DeviceID/>
+            <div className="deviceInfo">
+                <DeviceID/>
+            </div>
             <DeviceConnectionStatus/>
         </div>
     );

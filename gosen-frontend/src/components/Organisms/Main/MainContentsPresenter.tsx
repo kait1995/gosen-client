@@ -1,57 +1,19 @@
 import "./MainStyle.css";
 import AddButton from "../../Atoms/AddButton";
 import ItemContainer from "../Item/ItemContainer";
+import "./MainStyle.css";
 
 const MainContentsPresenter = () => {
+    const Test = () => {
+        return(
+            <ItemContainer/>
+        );
+    };
+
     return(
         <>
             <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
-            </div>
-            <div className="item">
-                <ItemContainer/>
+                <Test/>
             </div>
             <div className="addButton">
                 <AddButton/>
