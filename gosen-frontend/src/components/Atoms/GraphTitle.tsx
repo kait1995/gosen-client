@@ -3,7 +3,7 @@ import "./AtomsStyle.css";
 const GraphTitle = () => {
     return(
         <div className="graphTitle">
-            Graph Title
+            Transitive Graph
         </div>
     );
 }

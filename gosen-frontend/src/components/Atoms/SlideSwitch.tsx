@@ -1,4 +1,3 @@
-import { FormControlLabel, FormGroup } from "@mui/material";
 import Switch from "@mui/material/Switch";
 import "./AtomsStyle.css";
 

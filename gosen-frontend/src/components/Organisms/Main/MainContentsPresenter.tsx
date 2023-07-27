@@ -3,8 +3,8 @@ import AddButton from "../../Atoms/AddButton";
 import ItemContainer from "../Item/ItemContainer";
 import "./MainStyle.css";
 
-const MainContentsPresenter = () => {
-    const Test = () => {
+const MainContentsPresenter = (props:{initData: {}, setInitData: React.Dispatch<React.SetStateAction<{}>>}) => {
+    const Item = () => {
         return(
             <ItemContainer/>
         );
@@ -13,7 +13,7 @@ const MainContentsPresenter = () => {
     return(
         <>
             <div className="item">
-                <Test/>
+                <Item/>
             </div>
             <div className="addButton">
                 <AddButton/>
