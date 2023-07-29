@@ -1,95 +1,43 @@
 import { useState } from "react";
+import { GraphData, ItemInfo } from "../../types";
 import MainContentsPresenter from "./MainContentsPresenter";
 import "./MainStyle.css";
 
 const MainContentsContainer = () => {
-    const [initData, setInitData] = useState({});
-    /*
-    const initData:{} = {
-        data1:{
-            itemSettings:{
-                title:"title1",
-                deviceNumber:"1234",
-                is_activated:"true",
-                use_camera:"true",
-                use_timer:"true",
-                timer_start:"start",
-                timer_end:"end",
-                manual_watering:"true",
-                status_0:"true",
-                status_1:"true",
-                status_2:"true",
-                status_3:"true",
-                status_4:"true",
-                status_5:"true",
-                status_6:"true",
-                status_7:"true",
-                status_8:"true",
-                status_9:"true",
-            },
-            graphData:{
-                battery_status:"100",
-                signal_strength:"100",
-                humidity:"100",
-                temperature:"100",
-                option_0:"0",
-                option_1:"0",
-                option_2:"0",
-                option_3:"0",
-                option_4:"0",
-                option_5:"0",
-                option_6:"0",
-                option_7:"0",
-                option_8:"0",
-                option_9:"0",
-                date:"0000/00/00",
-            },
-        },
-        data2:{
-            itemSettings:{
-                title:"title2",
-                deviceNumber:"1234",
-                is_activated:"true",
-                use_camera:"true",
-                use_timer:"true",
-                timer_start:"start",
-                timer_end:"end",
-                manual_watering:"true",
-                status_0:"true",
-                status_1:"true",
-                status_2:"true",
-                status_3:"true",
-                status_4:"true",
-                status_5:"true",
-                status_6:"true",
-                status_7:"true",
-                status_8:"true",
-                status_9:"true",
-            },
-            graphData:{
-                battery_status:"100",
-                signal_strength:"100",
-                humidity:"100",
-                temperature:"100",
-                option_0:"0",
-                option_1:"0",
-                option_2:"0",
-                option_3:"0",
-                option_4:"0",
-                option_5:"0",
-                option_6:"0",
-                option_7:"0",
-                option_8:"0",
-                option_9:"0",
-                date:"0000/00/00",
-            },
-        },
+    const [itemInfos, setItemInfos] = useState<Array<ItemInfo>>([]);
+    const [graphDataList, setGraphDataList] = useState<Array<GraphData>>([]);
+    const addItemInfo = (newInfo:ItemInfo) => {
+        setItemInfos([...itemInfos, newInfo]);
     };
-    */
+    const [defaultItemInfo, setDefaultItemInfo] = useState({
+        title:"Title",
+        deviceNumber:"Device number",
+        is_activated:"true",
+        use_camera:"true",
+        use_timer:"true",
+        timer_start:"Timer start",
+        timer_end:"Timer end",
+        manual_watering:"true",
+        status_0:"Status 0",
+        status_1:"Status 1",
+        status_2:"Status 2",
+        status_3:"Status 3",
+        status_4:"Status 4",
+        status_5:"Status 5",
+        status_6:"Status 6",
+        status_7:"Status 7",
+        status_8:"Status 8",
+        status_9:"Status 9",
+    });
 
     return (
         <div className="mainContentsPresenter">
-            <MainContentsPresenter initData={initData} setInitData={setInitData}/>
+            <MainContentsPresenter 
+                itemInfos={itemInfos}
+                defaultItemInfo={defaultItemInfo}
+                graphDataList={graphDataList}
+                addItemInfo={addItemInfo}
+            />
         </div>
     );
 }

@@ -1,21 +1,32 @@
 import "./MainStyle.css";
 import AddButton from "../../Atoms/AddButton";
-import ItemContainer from "../Item/ItemContainer";
 import "./MainStyle.css";
+import { GraphData, GraphDataList, ItemInfo, ItemInfos } from "../../types";
+import ItemContainer from "../Item/ItemContainer";
 
-const MainContentsPresenter = (props:{initData: {}, setInitData: React.Dispatch<React.SetStateAction<{}>>}) => {
-    const Item = () => {
+const MainContentsPresenter = (props:{
+    itemInfos:ItemInfos | [],
+    defaultItemInfo:ItemInfo,
+    graphDataList:GraphDataList | [],
+    addItemInfo:(newInfo:ItemInfo) => void
+}) => {
+
+    const ShowItems = (itemInfoProps:{itemInfos:ItemInfos | []}) => {
         return(
-            <ItemContainer/>
+            <>
+                {itemInfoProps.itemInfos.map((key, val) => {
+                    return(<ItemContainer/>);
+                })};
+            </>
         );
     };
 
     return(
         <>
             <div className="item">
-                <Item/>
+                <ShowItems itemInfos={props.itemInfos}/>
             </div>
-            <div className="addButton">
+            <div className="addButton" onClick={()=>{props.addItemInfo(props.defaultItemInfo)}}>
                 <AddButton/>
             </div>
         </>
