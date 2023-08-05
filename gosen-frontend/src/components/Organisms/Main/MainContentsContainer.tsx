@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { GraphData, ItemInfo } from "../../types";
 import MainContentsPresenter from "./MainContentsPresenter";
 import "./MainStyle.css";

@@ -6,7 +6,7 @@ const SlideSwitch = () => {
     return(
         <div>
             <div className="slideSwitch">
-                <Switch {...label} />
+                <Switch {...label} onClick={(e)=>{e.stopPropagation()}}/>
             </div>
         </div>
     );

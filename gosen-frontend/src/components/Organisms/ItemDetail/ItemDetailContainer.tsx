@@ -1,8 +1,14 @@
+import { useState } from "react";
 import ItemDetailPresenter from "./ItemDetailPresenter";
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = (props:{
+    showDetails:boolean,
+}) => {
+
     return(
-        <ItemDetailPresenter/>
+        <>
+            {props.showDetails && (<ItemDetailPresenter/>)}
+        </>
     );
 }
 
