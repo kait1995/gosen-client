@@ -10,25 +10,26 @@ const MainContentsContainer = () => {
     const addItemInfo = (newInfo:ItemInfo) => {
         setItemInfos([...itemInfos, newInfo]);
     };
+
     const [defaultItemInfo, setDefaultItemInfo] = useState({
         title:"Title",
-        deviceNumber:"Device number",
-        is_activated:"true",
-        use_camera:"true",
-        use_timer:"true",
-        timer_start:"Timer start",
-        timer_end:"Timer end",
-        manual_watering:"true",
-        status_0:"Status 0",
-        status_1:"Status 1",
-        status_2:"Status 2",
-        status_3:"Status 3",
-        status_4:"Status 4",
-        status_5:"Status 5",
-        status_6:"Status 6",
-        status_7:"Status 7",
-        status_8:"Status 8",
-        status_9:"Status 9",
+        deviceNumber:12345,
+        isActivated:false,
+        useCamera:true,
+        useTimer:true,
+        timerStart:"Timer start",
+        timerEnd:"Timer end",
+        manualWatering:true,
+        status0:true,
+        status1:true,
+        status2:true,
+        status3:true,
+        status4:true,
+        status5:true,
+        status6:true,
+        status7:true,
+        status8:true,
+        status9:true,
     });
 
     return (

@@ -20,7 +20,7 @@ const ItemPresenter = (props:{
         ).then((res) => {
             console.log(res);
         });
-    },[]);
+    },[props.showDetails]);
 
     return(
         <>
