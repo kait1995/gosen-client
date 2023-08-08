@@ -4,6 +4,7 @@ import "./MainStyle.css";
 import { GraphData, GraphDataList, ItemInfo, ItemInfos } from "../../types";
 import ItemContainer from "../Item/ItemContainer";
 import axios from "axios";
+import { useEffect } from "react";
 
 const MainContentsPresenter = (props:{
     itemInfos:ItemInfos | [],
@@ -29,9 +30,7 @@ const MainContentsPresenter = (props:{
     return(
         <>
             <ShowItems/>
-            <div className="addButton" onClick={()=>{
-                props.addItemInfo(props.defaultItemInfo);
-            }}>
+            <div className="addButton" onClick={()=>{props.addItemInfo(props.defaultItemInfo);}}>
                 <AddButton/>
             </div>
         </>

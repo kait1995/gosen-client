@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { ItemInfo } from "../../types";
 import ItemDetailContainer from "../ItemDetail/ItemDetailContainer";
 import ItemPresenter from "./ItemPresenter";

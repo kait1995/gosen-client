@@ -1,4 +1,5 @@
 import axios from "axios";
+import { env } from "process";
 import { useEffect } from "react";
 import BatteryIcon from "../../Atoms/BatteryIcon";
 import ItemTitle from "../../Atoms/Item/ItemTitle";
@@ -12,15 +13,6 @@ const ItemPresenter = (props:{
     setShowDetails:React.Dispatch<React.SetStateAction<boolean>>,
     itemInfo:ItemInfo,
 }) => {
-
-    useEffect(() => {
-        axios.post(
-            "http://localhost:8080/v1/system/add",
-            props.itemInfo,
-        ).then((res) => {
-            console.log(res);
-        });
-    },[props.showDetails]);
 
     return(
         <>

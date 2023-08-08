@@ -32,6 +32,15 @@ const MainContentsContainer = () => {
         status9:true,
     });
 
+    useEffect(() => {
+        axios.post(
+            `${process.env.REACT_APP_SYSTEM_ADD_API}`,
+            defaultItemInfo,
+        ).then((res) => {
+            console.log(res);
+        });
+    },[itemInfos]);
+
     return (
         <div className="mainContentsPresenter">
             <MainContentsPresenter 
