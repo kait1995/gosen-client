@@ -1,10 +1,24 @@
 
-.main{
-    flex: 1;
+.mainContentsPresenter{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: #07305f;
     background-size: cover;
     padding: 25px;
+    position: relative;
+    align-items: center;
+    height: 100%;
+}
+
+.item{
+    padding: 10px;
+    min-width: 250px;
+    max-width: 800px;
+    width: 80%;
+}
+
+.addButton{
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
 }

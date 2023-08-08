@@ -1,0 +1,13 @@
+
+.detail{
+    display: flex;
+    flex-flow: column;
+    background-color: #134b83;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 4px 4px 6px black;
+    padding: 15px;
+    color: #fafafa;
+}
+
+
+

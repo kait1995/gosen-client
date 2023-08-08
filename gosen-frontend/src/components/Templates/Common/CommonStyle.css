@@ -4,3 +4,20 @@
     flex-flow: column;
     height: 100vh;
 }
+
+.header{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+.main{
+    flex: 1;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+
+

@@ -3,7 +3,12 @@ import "./ItemStyle.css";
 const ItemTitle = () => {
     return(
         <div>
-            <div className="title">test2</div>
+            <input 
+                className="itemTitle" 
+                type="text" 
+                placeholder="Input title ID here..."
+                onClick={(e)=>{e.stopPropagation()}}
+            />
         </div>
     );
 }

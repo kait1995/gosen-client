@@ -3,8 +3,8 @@ import HeaderTitle from '../../Atoms/Header/HeaderTitle';
 import HeaderUserIcon from '../../Atoms/Header/HeaderUserIcon';
 import './HeaderStyle.css';
 
-const Header = () => {
-    return (
+const HeaderPresenter = () => {
+    return(
         <div className="header">
             <HeaderSettingsIcon/>
             <HeaderTitle/>
@@ -13,4 +13,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default HeaderPresenter;
