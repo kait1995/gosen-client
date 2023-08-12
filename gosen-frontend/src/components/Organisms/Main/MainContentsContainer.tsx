@@ -8,7 +8,16 @@ const MainContentsContainer = () => {
     const [itemInfos, setItemInfos] = useState<Array<ItemInfo>>([]);
     const [graphDataList, setGraphDataList] = useState<Array<GraphData>>([]);
     const addItemInfo = (newInfo:ItemInfo) => {
-        setItemInfos([...itemInfos, newInfo]);
+        axios.post(
+            `${process.env.REACT_APP_SYSTEM_ADD_API}`,
+            newInfo,
+        ).catch((res) => {
+            if(res.response.status === "200"){
+                setItemInfos([...itemInfos, newInfo]);
+            }else{
+                console.log(res.response.status);
+            }
+        });
     };
 
     const [defaultItemInfo, setDefaultItemInfo] = useState({
@@ -31,15 +40,6 @@ const MainContentsContainer = () => {
         status8:true,
         status9:true,
     });
-
-    useEffect(() => {
-        axios.post(
-            `${process.env.REACT_APP_SYSTEM_ADD_API}`,
-            defaultItemInfo,
-        ).then((res) => {
-            console.log(res);
-        });
-    },[itemInfos]);
 
     return (
         <div className="mainContentsPresenter">

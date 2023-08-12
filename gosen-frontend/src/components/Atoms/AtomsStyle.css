@@ -12,6 +12,12 @@
     opacity: 0.6;
 }
 
+.delButton{
+    color: #fafafa;
+    height: 50px;
+    width: 50px;
+}
+
 .deviceID{
     background: #134b83;
     border: none;

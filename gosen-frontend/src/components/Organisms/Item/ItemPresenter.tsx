@@ -1,6 +1,3 @@
-import axios from "axios";
-import { env } from "process";
-import { useEffect } from "react";
 import BatteryIcon from "../../Atoms/BatteryIcon";
 import ItemTitle from "../../Atoms/Item/ItemTitle";
 import SlideSwitch from "../../Atoms/SlideSwitch";

@@ -1,3 +1,4 @@
+import DeleteButton from "../../Atoms/DeleteButton";
 import Graph from "../../Atoms/Graph";
 import GraphTitle from "../../Atoms/GraphTitle";
 import DeviceInfo from "../../Molecules/DeviceInfo";
@@ -18,6 +19,9 @@ const ItemDetailPresenter = () => {
             </div>
             <div>
                 <FunctionSet/>
+            </div>
+            <div className="adjustDelButton">
+                <DeleteButton/>
             </div>
         </div>
     );
