@@ -15,7 +15,7 @@ const MainContentsContainer = () => {
             if(res.response.status === "200"){
                 setItemInfos([...itemInfos, newInfo]);
             }else{
-                console.log(res.response.status);
+                console.log(res.response);
             }
         });
     };
