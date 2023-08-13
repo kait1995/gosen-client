@@ -3,9 +3,13 @@ import Graph from "../../Atoms/Graph";
 import GraphTitle from "../../Atoms/GraphTitle";
 import DeviceInfo from "../../Molecules/DeviceInfo";
 import FunctionSet from "../../Molecules/FunctionSet";
+import { ItemInfo } from "../../types";
 import "./ItemDetailStyle.css";
 
-const ItemDetailPresenter = () => {
+const ItemDetailPresenter = (props:{
+    itemInfo:ItemInfo,
+    delItemInfo:(title:string)=>void}
+) => {
     return(
         <div className="detail">
             <div>
@@ -20,7 +24,7 @@ const ItemDetailPresenter = () => {
             <div>
                 <FunctionSet/>
             </div>
-            <div className="adjustDelButton">
+            <div className="adjustDelButton" onClick={()=>{props.delItemInfo(props.itemInfo.title)}}>
                 <DeleteButton/>
             </div>
         </div>

@@ -8,7 +8,8 @@ const MainContentsPresenter = (props:{
     itemInfos:ItemInfos | [],
     defaultItemInfo:ItemInfo,
     graphDataList:GraphDataList | [],
-    addItemInfo:(newInfo:ItemInfo) => void
+    addItemInfo:(newInfo:ItemInfo) => void,
+    delItemInfo:(title:string) => void
 }) => {
 
     const ShowItems = () => {
@@ -17,7 +18,7 @@ const MainContentsPresenter = (props:{
                 {props.itemInfos.map((itemInfo, key) => {
                     return(
                         <div className="item">
-                            <ItemContainer itemInfo={itemInfo}/>
+                            <ItemContainer itemInfo={itemInfo} delItemInfo={props.delItemInfo}/>
                         </div>
                     );
                 })}

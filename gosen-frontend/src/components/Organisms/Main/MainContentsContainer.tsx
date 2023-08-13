@@ -7,6 +7,7 @@ import "./MainStyle.css";
 const MainContentsContainer = () => {
     const [itemInfos, setItemInfos] = useState<Array<ItemInfo>>([]);
     const [graphDataList, setGraphDataList] = useState<Array<GraphData>>([]);
+    
     const addItemInfo = (newInfo:ItemInfo) => {
         axios.post(
             `${process.env.REACT_APP_SYSTEM_ADD_API}`,
@@ -17,6 +18,17 @@ const MainContentsContainer = () => {
             console.log(res.response);
         });
     };
+
+    const delItemInfo = (title:string) => {
+        axios.post(
+            `${process.env.REACT_APP_SYSTEM_DEL_API}/${title}`
+        ).then((res) => {
+            const filteredArray = itemInfos.filter((args) => args.title !== title);
+            setItemInfos(filteredArray);
+        }).catch((res) => {
+            console.log(res.response);
+        });
+    }
 
     const [defaultItemInfo, setDefaultItemInfo] = useState({
         title:"Title",
@@ -46,6 +58,7 @@ const MainContentsContainer = () => {
                 defaultItemInfo={defaultItemInfo}
                 graphDataList={graphDataList}
                 addItemInfo={addItemInfo}
+                delItemInfo={delItemInfo}
             />
         </div>
     );

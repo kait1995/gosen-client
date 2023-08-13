@@ -1,13 +1,23 @@
 import { useState } from "react";
 import ItemDetailPresenter from "./ItemDetailPresenter";
+import { ItemInfo } from "../../types";
 
 const ItemDetailContainer = (props:{
-    showDetails:boolean,
+    itemInfo:ItemInfo,
+    delItemInfo:(title:string) => void
+    showDetails:boolean
 }) => {
 
     return(
         <>
-            {props.showDetails && (<ItemDetailPresenter/>)}
+            {
+                props.showDetails && (
+                    <ItemDetailPresenter 
+                        itemInfo={props.itemInfo}
+                        delItemInfo={props.delItemInfo}
+                    />
+                )
+            }
         </>
     );
 }
