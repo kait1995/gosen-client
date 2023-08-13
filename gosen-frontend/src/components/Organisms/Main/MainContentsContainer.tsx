@@ -11,12 +11,10 @@ const MainContentsContainer = () => {
         axios.post(
             `${process.env.REACT_APP_SYSTEM_ADD_API}`,
             newInfo,
-        ).catch((res) => {
-            if(res.response.status === "200"){
-                setItemInfos([...itemInfos, newInfo]);
-            }else{
-                console.log(res.response);
-            }
+        ).then((res) => {
+            setItemInfos([...itemInfos, newInfo]);
+        }).catch((res) => {
+            console.log(res.response);
         });
     };
 
