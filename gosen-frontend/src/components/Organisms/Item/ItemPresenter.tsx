@@ -1,6 +1,3 @@
-import axios from "axios";
-import { env } from "process";
-import { useEffect } from "react";
 import BatteryIcon from "../../Atoms/BatteryIcon";
 import ItemTitle from "../../Atoms/Item/ItemTitle";
 import SlideSwitch from "../../Atoms/SlideSwitch";
@@ -12,6 +9,7 @@ const ItemPresenter = (props:{
     showDetails:boolean,
     setShowDetails:React.Dispatch<React.SetStateAction<boolean>>,
     itemInfo:ItemInfo,
+    delItemInfo:(title:string) => void
 }) => {
 
     return(
@@ -28,7 +26,11 @@ const ItemPresenter = (props:{
                 </div>
             </div>
             <div className="detailAdjust">
-                <ItemDetailContainer {...props}/>
+                <ItemDetailContainer 
+                    itemInfo={props.itemInfo} 
+                    delItemInfo={props.delItemInfo}
+                    showDetails={props.showDetails}
+                />
             </div>
         </>
     );

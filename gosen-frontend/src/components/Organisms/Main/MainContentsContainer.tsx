@@ -7,9 +7,28 @@ import "./MainStyle.css";
 const MainContentsContainer = () => {
     const [itemInfos, setItemInfos] = useState<Array<ItemInfo>>([]);
     const [graphDataList, setGraphDataList] = useState<Array<GraphData>>([]);
+    
     const addItemInfo = (newInfo:ItemInfo) => {
-        setItemInfos([...itemInfos, newInfo]);
+        axios.post(
+            `${process.env.REACT_APP_SYSTEM_ADD_API}`,
+            newInfo,
+        ).then((res) => {
+            setItemInfos([...itemInfos, newInfo]);
+        }).catch((res) => {
+            console.log(res.response);
+        });
     };
+
+    const delItemInfo = (title:string) => {
+        axios.post(
+            `${process.env.REACT_APP_SYSTEM_DEL_API}/${title}`
+        ).then((res) => {
+            const filteredArray = itemInfos.filter((args) => args.title !== title);
+            setItemInfos(filteredArray);
+        }).catch((res) => {
+            console.log(res.response);
+        });
+    }
 
     const [defaultItemInfo, setDefaultItemInfo] = useState({
         title:"Title",
@@ -32,15 +51,6 @@ const MainContentsContainer = () => {
         status9:true,
     });
 
-    useEffect(() => {
-        axios.post(
-            `${process.env.REACT_APP_SYSTEM_ADD_API}`,
-            defaultItemInfo,
-        ).then((res) => {
-            console.log(res);
-        });
-    },[itemInfos]);
-
     return (
         <div className="mainContentsPresenter">
             <MainContentsPresenter 
@@ -48,6 +58,7 @@ const MainContentsContainer = () => {
                 defaultItemInfo={defaultItemInfo}
                 graphDataList={graphDataList}
                 addItemInfo={addItemInfo}
+                delItemInfo={delItemInfo}
             />
         </div>
     );
