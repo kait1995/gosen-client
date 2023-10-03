@@ -7,30 +7,40 @@ import "./MainStyle.css";
 const MainContentsContainer = () => {
     const [itemInfos, setItemInfos] = useState<Array<ItemInfo>>([]);
     const [graphDataList, setGraphDataList] = useState<Array<GraphData>>([]);
+
+    const getItems = () => {
+        axios.get(
+            `${process.env.REACT_APP_SYSTEM_GET_API}`
+        ).then((res) => {
+            setItemInfos([...res.data]);
+        }).catch((res) => {
+            console.log(res.response);
+        });
+    }
     
     const addItemInfo = (newInfo:ItemInfo) => {
         axios.post(
             `${process.env.REACT_APP_SYSTEM_ADD_API}`,
             newInfo,
         ).then((res) => {
-            setItemInfos([...itemInfos, newInfo]);
+            getItems();
         }).catch((res) => {
             console.log(res.response);
         });
     };
 
-    const delItemInfo = (title:string) => {
+    const delItemInfo = (id:String) => {
         axios.post(
-            `${process.env.REACT_APP_SYSTEM_DEL_API}/${title}`
+            `${process.env.REACT_APP_SYSTEM_DEL_API}/${id}`
         ).then((res) => {
-            const filteredArray = itemInfos.filter((args) => args.title !== title);
-            setItemInfos(filteredArray);
+            getItems();
         }).catch((res) => {
             console.log(res.response);
         });
     }
 
     const [defaultItemInfo, setDefaultItemInfo] = useState({
+        settingId: "",
         title:"Title",
         deviceNumber:12345,
         isActivated:false,

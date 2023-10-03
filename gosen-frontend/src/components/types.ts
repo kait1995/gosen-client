@@ -1,5 +1,6 @@
 
 type ItemInfo = {
+    settingId:string,
     title:string,
     deviceNumber:number,
     isActivated:boolean,

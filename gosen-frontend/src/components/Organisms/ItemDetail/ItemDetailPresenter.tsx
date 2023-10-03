@@ -8,7 +8,7 @@ import "./ItemDetailStyle.css";
 
 const ItemDetailPresenter = (props:{
     itemInfo:ItemInfo,
-    delItemInfo:(title:string)=>void}
+    delItemInfo:(id:String)=>void}
 ) => {
     return(
         <div className="detail">
@@ -24,7 +24,7 @@ const ItemDetailPresenter = (props:{
             <div>
                 <FunctionSet/>
             </div>
-            <div className="adjustDelButton" onClick={()=>{props.delItemInfo(props.itemInfo.title)}}>
+            <div className="adjustDelButton" onClick={()=>{props.delItemInfo(props.itemInfo.settingId)}}>
                 <DeleteButton/>
             </div>
         </div>

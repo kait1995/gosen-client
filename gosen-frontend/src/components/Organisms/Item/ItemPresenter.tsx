@@ -9,7 +9,7 @@ const ItemPresenter = (props:{
     showDetails:boolean,
     setShowDetails:React.Dispatch<React.SetStateAction<boolean>>,
     itemInfo:ItemInfo,
-    delItemInfo:(title:string) => void
+    delItemInfo:(id:String) => void
 }) => {
 
     return(

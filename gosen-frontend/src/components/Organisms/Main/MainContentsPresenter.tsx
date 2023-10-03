@@ -9,7 +9,7 @@ const MainContentsPresenter = (props:{
     defaultItemInfo:ItemInfo,
     graphDataList:GraphDataList | [],
     addItemInfo:(newInfo:ItemInfo) => void,
-    delItemInfo:(title:string) => void
+    delItemInfo:(id:String) => void
 }) => {
 
     const ShowItems = () => {

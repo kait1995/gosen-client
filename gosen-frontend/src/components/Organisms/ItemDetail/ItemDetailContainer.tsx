@@ -4,7 +4,7 @@ import { ItemInfo } from "../../types";
 
 const ItemDetailContainer = (props:{
     itemInfo:ItemInfo,
-    delItemInfo:(title:string) => void
+    delItemInfo:(id:String) => void
     showDetails:boolean
 }) => {
 
