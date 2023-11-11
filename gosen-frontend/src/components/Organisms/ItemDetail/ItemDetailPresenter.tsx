@@ -1,3 +1,4 @@
+import axios from "axios";
 import DeleteButton from "../../Atoms/DeleteButton";
 import Graph from "../../Atoms/Graph";
 import GraphTitle from "../../Atoms/GraphTitle";
@@ -8,8 +9,8 @@ import "./ItemDetailStyle.css";
 
 const ItemDetailPresenter = (props:{
     itemInfo:ItemInfo,
-    delItemInfo:(id:String)=>void}
-) => {
+    delInfo:() => void,
+}) => {
     return(
         <div className="detail">
             <div>
@@ -24,7 +25,7 @@ const ItemDetailPresenter = (props:{
             <div>
                 <FunctionSet/>
             </div>
-            <div className="adjustDelButton" onClick={()=>{props.delItemInfo(props.itemInfo.settingId)}}>
+            <div className="adjustDelButton" onClick={() => {props.delInfo()}}>
                 <DeleteButton/>
             </div>
         </div>

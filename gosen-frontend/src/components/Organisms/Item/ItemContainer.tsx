@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ItemInfo } from "../../types";
 import ItemPresenter from "./ItemPresenter";
 
-const ItemContainer = (props:{itemInfo:ItemInfo, delItemInfo:(id:String) => void}) => {
+const ItemContainer = (props:{itemInfo:ItemInfo}) => {
     const [showDetails, setShowDetails] = useState<boolean>(false);
 
     return(
@@ -10,7 +10,6 @@ const ItemContainer = (props:{itemInfo:ItemInfo, delItemInfo:(id:String) => void
             showDetails={showDetails} 
             setShowDetails={setShowDetails}
             itemInfo={props.itemInfo}
-            delItemInfo={props.delItemInfo}
         />
     );
 }

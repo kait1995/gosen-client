@@ -9,7 +9,6 @@ const ItemPresenter = (props:{
     showDetails:boolean,
     setShowDetails:React.Dispatch<React.SetStateAction<boolean>>,
     itemInfo:ItemInfo,
-    delItemInfo:(id:String) => void
 }) => {
 
     return(
@@ -28,7 +27,6 @@ const ItemPresenter = (props:{
             <div className="detailAdjust">
                 <ItemDetailContainer 
                     itemInfo={props.itemInfo} 
-                    delItemInfo={props.delItemInfo}
                     showDetails={props.showDetails}
                 />
             </div>
