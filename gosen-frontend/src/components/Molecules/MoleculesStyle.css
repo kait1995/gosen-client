@@ -1,4 +1,6 @@
 .deviceInfo{
-    float: left;
-    padding-right: 10px;
+    background: #3d85c6;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    color: #fafafa;
 }

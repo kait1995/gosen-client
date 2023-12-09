@@ -2,11 +2,11 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import CommonContainer from "./Templates/Common/CommonContainer";
 import "./AppStyle.css";
 import { configureStore } from "@reduxjs/toolkit";
-import reducer from "../common/reducer";
 import { Provider } from "react-redux";
+import allReducers from "../common/reducers";
 
 function App() {
-  const store = configureStore({reducer: reducer});
+  const store = configureStore({reducer: allReducers});
 
   const PageNotFound = () => {
     return(

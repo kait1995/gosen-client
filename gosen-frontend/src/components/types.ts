@@ -24,6 +24,7 @@ type ItemInfo = {
 type ItemInfos = Array<ItemInfo>;
 
 type GraphData = {
+    deviceNumber:number
     batteryStatus:string,
     signalStrength:string,
     humidity:string,

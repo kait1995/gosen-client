@@ -5,24 +5,22 @@ import { useCustomAxios } from "../../../common/customHooks";
 import { GraphData, ItemInfo } from "../../types";
 import MainContentsPresenter from "./MainContentsPresenter";
 import "./MainStyle.css";
+import { updateItem } from "../../../common/actions";
 
 const MainContentsContainer = () => {
-    const state = useSelector(
-        (state: {defaultItemInfo: ItemInfo, itemInfos: ItemInfo[], graphDataList: GraphData[]}) => state
-    );
+    const itemInfos = useSelector((state: {itemInfos: ItemInfo[], graphData: GraphData[]}) => state.itemInfos);
     const customAxios = useCustomAxios();
     const dispatch = useDispatch();
     const addInfo = async (data:any) => {
-        await customAxios.post(`${process.env.REACT_APP_SYSTEM_ADD_API}`, data);
-        await customAxios.get(`${process.env.REACT_APP_SYSTEM_GET_API}`).then((res) => {
-            dispatch({type:"UPDATE_ITEM", data: res.data});
+        await customAxios.post(`${process.env.REACT_APP_ITEM_API}`, data);
+        await customAxios.get(`${process.env.REACT_APP_ITEM_API}`).then((res) => {
+            dispatch(updateItem(res));
         });
     };
-
     return (
         <div className="mainContentsPresenter">
             <MainContentsPresenter 
-                state={state}
+                itemInfos={itemInfos}
                 addInfo={addInfo}
             />
         </div>

@@ -1,14 +1,25 @@
-import DeviceConnectionStatus from "../Atoms/DeviceConnectionStatus";
-import DeviceID from "../Atoms/DeviceID";
+import { DeviceInfoTitle } from "../Atoms/DeviceInfoTitle";
 import "./MoleculesStyle.css";
 
-const DeviceInfo = () => {
+const DeviceInfo = (props:{
+    setOptions:() => JSX.Element[],
+    setSelectedDeviceNumber: React.Dispatch<React.SetStateAction<number>>
+}) => {
     return(
         <div>
-            <div className="deviceInfo">
-                <DeviceID/>
+            <div>
+                <DeviceInfoTitle/>
             </div>
-            <DeviceConnectionStatus/>
+            <div>
+                <select 
+                    className="deviceInfo"
+                    onChange={(e)=>props.setSelectedDeviceNumber(Number(e.target.value))}
+                    defaultValue={"none"}
+                >
+                    <option key="none">none</option>
+                    {props.setOptions()}
+                </select>
+            </div>
         </div>
     );
 }
