@@ -9,28 +9,24 @@ const ItemPresenter = (props:{
     showDetails:boolean,
     setShowDetails:React.Dispatch<React.SetStateAction<boolean>>,
     itemInfo:ItemInfo,
-    delItemInfo:(title:string) => void
+    updateInfo:(title:string) => void,
 }) => {
 
     return(
         <>
             <div onClick={() => props.setShowDetails(!props.showDetails)} className="itemBase">
                 <div className="slideSwitch">
-                    <SlideSwitch/>
+                    {/*<SlideSwitch/>*/}
                 </div>
                 <div className="itemTitle">
-                    <ItemTitle/>
+                    <ItemTitle itemInfo={props.itemInfo} handler={props.updateInfo} />
                 </div>
                 <div className="statusIcon">
-                    <BatteryIcon/>
+                    {/*<BatteryIcon/>*/}
                 </div>
             </div>
             <div className="detailAdjust">
-                <ItemDetailContainer 
-                    itemInfo={props.itemInfo} 
-                    delItemInfo={props.delItemInfo}
-                    showDetails={props.showDetails}
-                />
+                <ItemDetailContainer itemInfo={props.itemInfo} showDetails={props.showDetails}/>
             </div>
         </>
     );

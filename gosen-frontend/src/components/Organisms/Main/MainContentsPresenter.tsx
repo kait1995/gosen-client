@@ -1,15 +1,14 @@
 import "./MainStyle.css";
 import AddButton from "../../Atoms/AddButton";
 import "./MainStyle.css";
-import { GraphDataList, ItemInfo, ItemInfos } from "../../types";
+import { GraphData, GraphDataList, ItemInfo, ItemInfos } from "../../types";
 import ItemContainer from "../Item/ItemContainer";
+import { AxiosInstance } from "axios";
+import { defaultItemInfo } from "../../../common/defaultItemInfo";
 
-const MainContentsPresenter = (props:{
-    itemInfos:ItemInfos | [],
-    defaultItemInfo:ItemInfo,
-    graphDataList:GraphDataList | [],
-    addItemInfo:(newInfo:ItemInfo) => void,
-    delItemInfo:(title:string) => void
+const MainContentsPresenter = (props: {
+    itemInfos: ItemInfo[], 
+    addInfo:(data: any) => void
 }) => {
 
     const ShowItems = () => {
@@ -18,7 +17,7 @@ const MainContentsPresenter = (props:{
                 {props.itemInfos.map((itemInfo, key) => {
                     return(
                         <div className="item">
-                            <ItemContainer itemInfo={itemInfo} delItemInfo={props.delItemInfo}/>
+                            <ItemContainer itemInfo={itemInfo}/>
                         </div>
                     );
                 })}
@@ -29,7 +28,10 @@ const MainContentsPresenter = (props:{
     return(
         <>
             <ShowItems/>
-            <div className="addButton" onClick={()=>{props.addItemInfo(props.defaultItemInfo);}}>
+            <div 
+                className="addButton" 
+                onClick={() => props.addInfo(defaultItemInfo)}
+            >
                 <AddButton/>
             </div>
         </>

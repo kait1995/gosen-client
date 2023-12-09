@@ -6,9 +6,15 @@ import './HeaderStyle.css';
 const HeaderPresenter = () => {
     return(
         <div className="header">
-            <HeaderSettingsIcon/>
-            <HeaderTitle/>
-            <HeaderUserIcon/>            
+            <div>
+                {/*<HeaderSettingsIcon/>*/}
+            </div>
+            <div>
+                <HeaderTitle/>
+            </div>
+            <div>
+                {/*<HeaderUserIcon/>*/}
+            </div>          
         </div>
     );
 }

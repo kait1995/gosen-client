@@ -1,5 +1,6 @@
 
 type ItemInfo = {
+    settingId:string,
     title:string,
     deviceNumber:number,
     isActivated:boolean,
@@ -23,6 +24,7 @@ type ItemInfo = {
 type ItemInfos = Array<ItemInfo>;
 
 type GraphData = {
+    deviceNumber:number
     batteryStatus:string,
     signalStrength:string,
     humidity:string,
