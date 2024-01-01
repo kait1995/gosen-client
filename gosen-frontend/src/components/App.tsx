@@ -1,5 +1,5 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import CommonContainer from "./Templates/Common/CommonContainer";
+import PageContainer from "./Page/PageContainer";
 import "./AppStyle.css";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Provider store={store}>
           <Routes>
-            <Route path="/top" element={<CommonContainer/>}/>
+            <Route path="/top" element={<PageContainer/>}/>
             <Route path="*" element={<PageNotFound/>}/>
           </Routes>
         </Provider>

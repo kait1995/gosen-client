@@ -1,10 +1,10 @@
 import { useState } from "react";
 import ItemDetailPresenter from "./ItemDetailPresenter";
-import { GraphData, ItemInfo } from "../../types";
+import { GraphData, ItemInfo } from "../types";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { useCustomAxios } from "../../../common/customHooks";
-import { updateItem } from "../../../common/actions";
+import { useCustomAxios } from "../../common/customHooks";
+import { updateItem } from "../../common/actions";
 
 const ItemDetailContainer = (props:{itemInfo:ItemInfo, showDetails:boolean}) => {
     const customAxios = useCustomAxios();

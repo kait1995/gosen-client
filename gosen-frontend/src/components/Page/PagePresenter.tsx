@@ -1,8 +1,8 @@
-import HeaderContainer from "../../Organisms/Header/HeaderContainer";
-import MainContentsContainer from "../../Organisms/Main/MainContentsContainer";
-import "./CommonStyle.css";
+import HeaderContainer from "../Header/HeaderContainer";
+import MainContentsContainer from "../Main/MainContentsContainer";
+import "./PageStyle.css";
 
-const CommonPresenter = () => {
+const PagePresenter = () => {
     return(
         <div className="common">
             <div className="header">
@@ -15,4 +15,4 @@ const CommonPresenter = () => {
     );
 }
 
-export default CommonPresenter;
+export default PagePresenter;

@@ -1,5 +1,5 @@
-import { DeviceInfoTitle } from "../Atoms/DeviceInfoTitle";
-import "./MoleculesStyle.css";
+import { DeviceInfoTitle } from "../CommonParts/DeviceInfoTitle";
+import "./ItemDetailStyle.css";
 
 const DeviceInfo = (props:{
     setOptions:() => JSX.Element[],

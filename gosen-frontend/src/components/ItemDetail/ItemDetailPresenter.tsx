@@ -1,9 +1,9 @@
 import { useState } from "react";
-import DeleteButton from "../../Atoms/DeleteButton";
-import Graph from "../../Atoms/Graph";
-import GraphTitle from "../../Atoms/GraphTitle";
-import DeviceInfo from "../../Molecules/DeviceInfo";
-import { GraphData, ItemInfo } from "../../types";
+import DeleteButton from "../CommonParts/DeleteButton";
+import Graph from "../CommonParts/Graph";
+import GraphTitle from "../CommonParts/GraphTitle";
+import DeviceInfo from "./DeviceInfo";
+import { GraphData, ItemInfo } from "../types";
 import "./ItemDetailStyle.css";
 import { string } from "prop-types";
 

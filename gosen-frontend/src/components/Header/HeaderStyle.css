@@ -1,3 +1,13 @@
+.header{
+    background-color: #134b83;
+    box-shadow: 0px 4px 12px black;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    height: 70px;
+}
 
 .settingsIcon{
     color: #fafafa;

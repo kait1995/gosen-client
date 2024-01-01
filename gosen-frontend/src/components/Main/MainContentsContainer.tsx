@@ -1,11 +1,11 @@
 import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useCustomAxios } from "../../../common/customHooks";
-import { GraphData, ItemInfo } from "../../types";
+import { useCustomAxios } from "../../common/customHooks";
+import { GraphData, ItemInfo } from "../types";
 import MainContentsPresenter from "./MainContentsPresenter";
 import "./MainStyle.css";
-import { updateItem } from "../../../common/actions";
+import { updateItem } from "../../common/actions";
 
 const MainContentsContainer = () => {
     const itemInfos = useSelector((state: {itemInfos: ItemInfo[], graphData: GraphData[]}) => state.itemInfos);

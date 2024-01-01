@@ -1,6 +1,6 @@
-import HeaderSettingsIcon from '../../Atoms/Header/HeaderSettingIcon';
-import HeaderTitle from '../../Atoms/Header/HeaderTitle';
-import HeaderUserIcon from '../../Atoms/Header/HeaderUserIcon';
+import HeaderSettingsIcon from './HeaderSettingIcon';
+import HeaderTitle from './HeaderTitle';
+import HeaderUserIcon from './HeaderUserIcon';
 import './HeaderStyle.css';
 
 const HeaderPresenter = () => {

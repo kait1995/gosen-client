@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ItemInfo } from "../../types";
+import { ItemInfo } from "../types";
 import "./ItemStyle.css";
 
 const ItemTitle = (props:{

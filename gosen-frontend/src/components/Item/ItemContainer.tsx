@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { GraphData, ItemInfo } from "../../types";
+import { GraphData, ItemInfo } from "../types";
 import ItemPresenter from "./ItemPresenter";
 import { useDispatch, useSelector } from "react-redux";
-import { useCustomAxios } from "../../../common/customHooks";
-import { updateItem } from "../../../common/actions";
+import { useCustomAxios } from "../../common/customHooks";
+import { updateItem } from "../../common/actions";
 
 const ItemContainer = (props:{itemInfo:ItemInfo}) => {
     const [showDetails, setShowDetails] = useState<boolean>(false);

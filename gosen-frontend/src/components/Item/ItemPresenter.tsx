@@ -1,7 +1,7 @@
-import BatteryIcon from "../../Atoms/BatteryIcon";
-import ItemTitle from "../../Atoms/Item/ItemTitle";
-import SlideSwitch from "../../Atoms/SlideSwitch";
-import { ItemInfo } from "../../types";
+import BatteryIcon from "../CommonParts/BatteryIcon";
+import ItemTitle from "./ItemTitle";
+import SlideSwitch from "../CommonParts/SlideSwitch";
+import { ItemInfo } from "../types";
 import ItemDetailContainer from "../ItemDetail/ItemDetailContainer";
 import "./ItemStyle.css";
 

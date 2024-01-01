@@ -36,3 +36,19 @@
     margin-top: -10px;
     padding-top: 5px;
 }
+
+.itemTitle{
+    background-color: transparent;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    color: #fafafa;
+    font-size: 20px;
+}
+
+.itemTitle:focus{
+    outline: #fafafa 1px solid;
+}
+
+.itemTitle::placeholder{
+    color: #fafafa;
+}
