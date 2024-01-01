@@ -21,7 +21,9 @@ type ItemInfo = {
     status9:boolean,
 };
 
-type ItemInfos = Array<ItemInfo>;
+type ItemInfos = {
+    itemSettings:Array<ItemInfo>
+};
 
 type GraphData = {
     deviceNumber:number

@@ -27,28 +27,13 @@ const ItemDetailPresenter = (props:{
             })
         );
     };
-    const selectedGraphDataSet = (dataType: string, labelName: string) => {
-        const extractTargetDataAndLabels = (data: GraphData) => {
-            const extractedData = Object.entries(data)
-                .filter(([key, val]) => key === dataType)
-                .map(([key, val]) => val);
-            const extractedLabels = Object.entries(data)
-                .filter(([key, val]) => key === labelName)
-                .map(([key, val]) => val);
-            return {extractedData, extractedLabels};
-        };
-        const dataset = props.graphData
-            .filter((data) => data.deviceNumber === selectedDeviceNumber)
-            .map(extractTargetDataAndLabels);
-        return dataset.;
-    };
     return(
         <div className="detail">
             <div>
                 <GraphTitle/>
             </div>
             <div className="graph">
-                <Graph selectedGraphDataSet={selectedGraphDataSet}/>
+                <Graph/>
             </div>
             <div>
                 <DeviceInfo 

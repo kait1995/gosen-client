@@ -10,7 +10,7 @@ const itemInfoReducer = (
 ) => {
     switch (action.type) {
         case "UPDATE_ITEM":
-            return [...action.data];
+            return [...action.data.itemSettings];
         default:
             return state;
     }
@@ -22,7 +22,7 @@ const graphDataReducer = (
 ) => {
     switch (action.type) {
         case "UPDATE_GRAPH":
-            return [...action.data];
+            return [...action.data.environmentalData];
         default:
             return state;
     }
