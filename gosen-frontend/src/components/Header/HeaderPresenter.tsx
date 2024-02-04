@@ -1,6 +1,4 @@
-import HeaderSettingsIcon from './HeaderSettingIcon';
-import HeaderTitle from './HeaderTitle';
-import HeaderUserIcon from './HeaderUserIcon';
+import HeaderTitle from './HeaderParts/HeaderTitle';
 import './HeaderStyle.css';
 
 const HeaderPresenter = () => {

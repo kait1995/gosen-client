@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { ItemInfo } from "../types";
-import "./ItemStyle.css";
+import { ItemInfo } from "../../types";
+import "../ItemStyle.css";
 
 const ItemTitle = (props:{
     itemInfo:ItemInfo,
-    handler:(title:string) => void
+    handler:(newItem:ItemInfo) => void
 }) => {
     const [title, setTitle] = useState(props.itemInfo.title);
     return(
@@ -16,7 +16,7 @@ const ItemTitle = (props:{
                 placeholder="Input title ID here..."
                 onChange={(e) => setTitle(e.target.value)}
                 onKeyDown={(e) => {
-                    if(e.key === "Enter"){props.handler(title);}
+                    if(e.key === "Enter"){props.handler({...props.itemInfo, title});}
                 }}
                 onClick={(e) => e.stopPropagation()}
             />

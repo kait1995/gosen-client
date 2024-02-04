@@ -26,24 +26,25 @@ type ItemInfos = {
 };
 
 type GraphData = {
-    deviceNumber:number
-    batteryStatus:string,
-    signalStrength:string,
-    humidity:string,
-    temperature:string,
-    option0:string,
-    option1:string,
-    option2:string,
-    option3:string,
-    option4:string,
-    option5:string,
-    option6:string,
-    option7:string,
-    option8:string,
-    option9:string,
-    date:string,
+    humidity: number,
+    temperature: number,
+    option0: number,
+    option1: number,
+    option2: number,
+    option3: number,
+    option4: number,
+    option5: number,
+    option6: number,
+    option7: number,
+    option8: number,
+    option9: number,
 };
 
-type GraphDataList = Array<GraphData>;
+type GraphDataList = {
+    dateList:Array<string>,
+    measuredValues:Array<GraphData>
+}
 
-export type { ItemInfo, ItemInfos, GraphData , GraphDataList};
+type DeviceList = {deviceNumberList:Array<number>};
+
+export type { ItemInfo, ItemInfos, GraphData, GraphDataList, DeviceList};

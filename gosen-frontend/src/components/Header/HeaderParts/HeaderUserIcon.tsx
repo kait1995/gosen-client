@@ -1,5 +1,5 @@
 import { UserIcon } from '@heroicons/react/24/solid'
-import './HeaderStyle.css';
+import '../HeaderStyle.css';
 
 const HeaderUserIcon = () => {
     return(

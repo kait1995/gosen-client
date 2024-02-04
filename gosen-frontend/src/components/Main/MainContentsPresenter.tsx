@@ -1,9 +1,8 @@
 import "./MainStyle.css";
 import AddButton from "../CommonParts/AddButton";
 import "./MainStyle.css";
-import { GraphData, GraphDataList, ItemInfo, ItemInfos } from "../types";
+import { ItemInfo } from "../types";
 import ItemContainer from "../Item/ItemContainer";
-import { AxiosInstance } from "axios";
 import { defaultItemInfo } from "../../common/defaultItemInfo";
 
 const MainContentsPresenter = (props: {

@@ -1,29 +1,23 @@
-import { useState } from "react";
 import ItemDetailPresenter from "./ItemDetailPresenter";
-import { GraphData, ItemInfo } from "../types";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { useCustomAxios } from "../../common/customHooks";
-import { updateItem } from "../../common/actions";
+import { DeviceList, GraphDataList, ItemInfo } from "../types";
+import { useSelector } from "react-redux";
+import { useGraphData, useUpdateItem } from "../../common/customHooks";
 
 const ItemDetailContainer = (props:{itemInfo:ItemInfo, showDetails:boolean}) => {
-    const customAxios = useCustomAxios();
-    const graphData = useSelector((state: {itemInfo: ItemInfo[], graphData: GraphData[]}) => state.graphData);
-    const dispatch = useDispatch();
-    const delInfo = async (id = props.itemInfo.settingId) => {
-        await customAxios.delete(`${process.env.REACT_APP_ITEM_API}/${id}`);
-        await customAxios.get(`${process.env.REACT_APP_ITEM_API}`).then((res) => {
-            dispatch(updateItem(res));
-        });
-    };
+    const preloadedData = useSelector((state: {deviceList: DeviceList, graphData: GraphDataList}) => state);
+    const delInfo = useUpdateItem().delInfo;
+    const getGraphData = useGraphData().getGraphData;
+    const updateInfo = useUpdateItem().updateInfo;
 
     return(
         <>
             {props.showDetails && (
                 <ItemDetailPresenter 
                     itemInfo={props.itemInfo}
-                    graphData={graphData}
+                    preloadedData={preloadedData}
                     delInfo={delInfo}
+                    getGraphData={getGraphData}
+                    updateInfo={updateInfo}
                 />
             )}
         </>

@@ -1,6 +1,4 @@
-import BatteryIcon from "../CommonParts/BatteryIcon";
-import ItemTitle from "./ItemTitle";
-import SlideSwitch from "../CommonParts/SlideSwitch";
+import ItemTitle from "./ItemParts/ItemTitle";
 import { ItemInfo } from "../types";
 import ItemDetailContainer from "../ItemDetail/ItemDetailContainer";
 import "./ItemStyle.css";
@@ -9,7 +7,7 @@ const ItemPresenter = (props:{
     showDetails:boolean,
     setShowDetails:React.Dispatch<React.SetStateAction<boolean>>,
     itemInfo:ItemInfo,
-    updateInfo:(title:string) => void,
+    updateInfo:(newItem:ItemInfo) => void,
 }) => {
 
     return(

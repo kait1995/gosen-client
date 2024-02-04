@@ -1,24 +1,20 @@
-import { useState } from "react";
 import DeleteButton from "../CommonParts/DeleteButton";
 import Graph from "../CommonParts/Graph";
 import GraphTitle from "../CommonParts/GraphTitle";
-import DeviceInfo from "./DeviceInfo";
-import { GraphData, ItemInfo } from "../types";
+import DeviceInfo from "./ItemDetailParts/DeviceInfo";
+import { DeviceList, GraphDataList, ItemInfo } from "../types";
 import "./ItemDetailStyle.css";
-import { string } from "prop-types";
 
 const ItemDetailPresenter = (props:{
     itemInfo:ItemInfo,
-    graphData:GraphData[],
-    delInfo:() => void,
+    preloadedData:{deviceList: DeviceList, graphData: GraphDataList},
+    delInfo:(deleteTargetId:string) => void,
+    getGraphData:(id:number) => void,
+    updateInfo:(newItem: ItemInfo) => void
 }) => {
-    const [selectedDeviceNumber, setSelectedDeviceNumber] = useState(0);
     const setOptions = () => {
-        const distinctDeviceNumber = Array.from(
-            new Set(props.graphData.map((data, key) => data.deviceNumber))
-        );
         return(
-            distinctDeviceNumber.map((deviceNumber, key) => {
+            props.preloadedData.deviceList.deviceNumberList.map((deviceNumber, key) => {
                 return(
                     <option key={deviceNumber}>
                         {deviceNumber}
@@ -33,18 +29,19 @@ const ItemDetailPresenter = (props:{
                 <GraphTitle/>
             </div>
             <div className="graph">
-                <Graph/>
+                <Graph graphData={props.preloadedData.graphData}/>
             </div>
             <div>
                 <DeviceInfo 
                     setOptions={setOptions} 
-                    setSelectedDeviceNumber={setSelectedDeviceNumber}
+                    itemInfo={props.itemInfo}
+                    updateInfo={props.updateInfo}
                 />
             </div>
             <div>
                 {/*<FunctionSet/>*/}
             </div>
-            <div className="adjustDelButton" onClick={() => {props.delInfo()}}>
+            <div className="adjustDelButton" onClick={() => {props.delInfo(props.itemInfo.settingId)}}>
                 <DeleteButton/>
             </div>
         </div>

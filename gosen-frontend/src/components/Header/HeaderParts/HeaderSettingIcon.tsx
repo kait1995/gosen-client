@@ -1,5 +1,5 @@
 import AdjustmentsHorizontalIcon from "@heroicons/react/24/solid/AdjustmentsHorizontalIcon";
-import "./HeaderStyle.css";
+import "../HeaderStyle.css";
 
 const HeaderSettingsIcon = () => {
     return(

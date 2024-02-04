@@ -9,9 +9,9 @@ import {
     Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { GraphData } from '../types';
+import { GraphDataList } from '../types';
 
-const Graph = () => {
+const Graph = (props:{graphData: GraphDataList}) => {
     ChartJS.register(
         CategoryScale,
         LinearScale,
@@ -57,11 +57,8 @@ const Graph = () => {
         }
     };
       
-    //const selectedGraphData = props.selectedGraphDataSet("humidity","date");
-    //const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-      
     const data = {
-        //selectedGraphData.extractedData,
+        labels: props.graphData.dateList,
         datasets: [
             {
                 label: 'Dataset 1',

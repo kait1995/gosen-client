@@ -1,9 +1,11 @@
-import { DeviceInfoTitle } from "../CommonParts/DeviceInfoTitle";
-import "./ItemDetailStyle.css";
+import { DeviceInfoTitle } from "../../CommonParts/DeviceInfoTitle";
+import { ItemInfo } from "../../types";
+import "../ItemDetailStyle.css";
 
 const DeviceInfo = (props:{
     setOptions:() => JSX.Element[],
-    setSelectedDeviceNumber: React.Dispatch<React.SetStateAction<number>>
+    itemInfo:ItemInfo,
+    updateInfo:(newItem:ItemInfo) => void,
 }) => {
     return(
         <div>
@@ -13,7 +15,13 @@ const DeviceInfo = (props:{
             <div>
                 <select 
                     className="deviceInfo"
-                    onChange={(e)=>props.setSelectedDeviceNumber(Number(e.target.value))}
+                    onChange={
+                        () => {}
+                        /*(e)=>props.updateInfo({
+                            ...props.itemInfo,
+                            "deviceNumber":Number(e.target.value)
+                        })*/
+                    }
                     defaultValue={"none"}
                 >
                     <option key="none">none</option>
