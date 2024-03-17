@@ -14,9 +14,12 @@
 }
 
 .main{
-    flex: 1;
-    margin-top: 70px;
-    margin-bottom: 50px;
+    /*flex: 1;*/
+    /*margin-top: 70px;*/
+    /*margin-bottom: 50px;*/
+    flex-grow: 1;
+    background-image: url("../../../public/wallpaper.png");
+    background-size: cover;
 }
 
 
